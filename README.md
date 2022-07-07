@@ -31,7 +31,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
                              programming language / test / run the program / compile
 
 
-6. Send an email ==> TIP: turn off Safety for the account doautomaticreply@gmail.com
+6. Send an email ==> TIP: turn off Safety for the email address
 
     Human: Send me an email
               Subject: my first email / Message: This is my next application using Java
@@ -48,7 +48,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 
 9. Give a daily quote  ==>   Human: Give me a new quote / Shake the app to get a quote
 
-### 10. Get the most trending movies   ==>   Human: What is trending right now?
+10. Get the most trending movies   ==>   Human: What is trending right now?
 
 11. Find IP and location ==>   Human: Find my ip   /   Find my location
 
