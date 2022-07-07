@@ -31,7 +31,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
                              programming language / test / run the program / compile
 
 
-6. Send an email ==> TIP: turn off Safety for the email address
+6. Send an email ==> TIP: turn off Safety for the email address (the sender)
 
     Human: Send me an email
               Subject: my first email / Message: This is my next application using Java
