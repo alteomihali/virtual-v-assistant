@@ -51,11 +51,11 @@ def wishMe():
 
 
 def sendEmail():
-    senderemail = "doautomaticreply@gmail.com"
-    password = "Alteomihali1997."
+    senderemail = "your_email_address@gmail.com"
+    password = "your email password"
     email_list = {
-        "test": "alteomihali3@gmail.com",
-        "test1": "mihalialteo@gmail.com"
+        "test": "another_email_address@gmail.com",
+        "test1": "another_email_address2@gmail.com"
     }
     try:
         email = EmailMessage()
@@ -87,15 +87,15 @@ def get_random_quote():
     return res['slip']['advice']
 
 
-# def get_trending_movies():
-#     trending_movies = []
-#     apiKey = '8c247ea0b4b56ed2ff7d41c9a833aa77'
-#     res = requests.get(
-#         f"https://api.themoviedb.org/3/trending/movie/day?api_key={apiKey}").json()
-#     results = res["results"]
-#     for r in results:
-#         trending_movies.append(r["original_title"])
-#     return trending_movies[:5]
+def get_trending_movies():
+     trending_movies = []
+     apiKey = '8c247ea0b4b56ed2ff7d41c9a833aa77'
+     res = requests.get(
+         f"https://api.themoviedb.org/3/trending/movie/day?api_key={apiKey}").json()
+     results = res["results"]
+     for r in results:
+         trending_movies.append(r["original_title"])
+     return trending_movies[:5]
 
 
 def takeCommand():
@@ -251,34 +251,6 @@ if __name__ == '__main__':
 
         elif 'show me the weather today' in statement or 'what\'s the weather like' in statement or \
                 'show today\'s weather' in statement or 'show weather' in statement or 'weather' in statement:
-            # api_key = "1915fa522c5dd2c6f25c606ebec195cf"
-            # base_url = "https://api.openweathermap.org/data/2.5/weather?"
-            # speak("What's the city name?")
-            # city_name = takeCommand()
-            # complete_url = base_url + "appid=" + api_key + "&q=" + city_name + "&units=metric"
-            # response = requests.get(complete_url)
-            # x = response.json()
-            # if x["cod"] != "404":
-            #     y = x["main"]
-            #     current_temperature = y["temp"]
-            #     feels_like = y["feels_like"]
-            #     current_humidity = y["humidity"]
-            #     z = x["weather"]
-            #     weather_description = z[0]["description"]
-            #     print("The weather in " + city_name + " is: Temperature in Celsius unit = " + str(current_temperature)
-            #           + "\n Feels like " + str(feels_like) + "℃ " +
-            #           "\n Humidity (in percentage): " + str(current_humidity) +
-            #           "\n Description: " + str(weather_description)
-            #           )
-            #     speak("The weather in " + city_name + " is: Temperature in Celsius unit is "
-            #           + str(current_temperature)
-            #           + "\n Feels like " + str(feels_like) + "℃ " +
-            #           "\n Humidity in percentage: " + str(current_humidity) +
-            #           "\n Description: " + str(weather_description)
-            #           )
-            # else:
-            #     speak(" City Not Found ")
-
             try:
                 api_key = "1915fa522c5dd2c6f25c606ebec195cf"
                 base_url = "https://api.openweathermap.org/data/2.5/weather?"
@@ -286,8 +258,7 @@ if __name__ == '__main__':
                 city = takeCommand()
                 complete_url = base_url + "appid=" + api_key + "&q=" + city + "&units=metric"
                 response = requests.get(complete_url)
-                api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid" \
-                                                                                    "=1915fa522c5dd2c6f25c606ebec195cf "
+            #    api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=1915fa522c5dd2c6f25c606ebec195cf "
                 w_data = response.json()
                 weather = w_data['weather'][0]['main']
                 temp = int(w_data['main']['temp'])
@@ -334,10 +305,10 @@ if __name__ == '__main__':
             speak(f"The distance between {location1} and {location2} is {distance_places}")
             time.sleep(2)
 
-        # elif 'trending movies' in statement or 'show me the movies' or 'trending right now' in statement:
-        #     speak(f"Some of the trending movies are: {get_trending_movies()}")
-        #     speak("I am printing it on the screen")
-        #     print(*get_trending_movies(), sep='\n')
+        elif 'trending movies' in statement or 'show me the movies' or 'trending right now' in statement:
+            speak(f"Some of the trending movies are: {get_trending_movies()}")
+            speak("I am printing it on the screen")
+            print(*get_trending_movies(), sep='\n')
 
         elif 'find my ip' in statement or 'find my location' in statement:
             speak('Please wait. Let me check')
@@ -357,10 +328,6 @@ if __name__ == '__main__':
                 print(e)
 
         elif 'who are you' in statement or 'what can you do' in statement:
-            print('I am G-one version 1 point 1 your personal assistant. I am programmed to tasks like'
-                  'opening youtube, chrome, google calendar, predict time, search in wikipedia, predict weather'
-                  'in different cities, get top headline news from CNN, ask geographical questions about countries'
-                  'and other information')
             speak('I am G-one version 1 point 1 your personal assistant. I am programmed to tasks like'
                   'opening youtube, chrome, google calendar, predict time, search in wikipedia, predict weather'
                   'in different cities, get top headline news from CNN, ask geographical questions about countries'
@@ -368,12 +335,10 @@ if __name__ == '__main__':
 
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
             speak("I was built by Alteo")
-            print("I was built by Alteo")
 
         elif 'get the latest news' in statement or 'show me the news' in statement or 'news' in statement:
             news = webbrowser.open_new_tab("https://edition.cnn.com/")
             speak('Here are some of the latest headlines for today')
-            print('Here are some of the latest headlines for today')
             time.sleep(5)
 
         elif 'web' in statement:
@@ -395,7 +360,6 @@ if __name__ == '__main__':
 
         elif 'run command prompt' in statement.lower() or 'open command' in statement.lower():
             os.system('start cmd /k "Your Command Prompt Command"')
-            print('Command Prompt is ready now')
             speak('Command Prompt is ready now')
             time.sleep(3)
 
@@ -421,7 +385,6 @@ if __name__ == '__main__':
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
             speak('Here is the map of ' + location)
-            print('Here is the map of ' + location)
             time.sleep(5)
 
         elif 'joke' in statement:
@@ -431,7 +394,6 @@ if __name__ == '__main__':
 
         elif 'good bye' in statement or 'ok bye' in statement or 'stop' in statement:
             speak('Your personal assistant G-one is shutting down, Good bye')
-            print('Your personal assistant G-one is shutting down, Good bye')
             break
 
         elif "log off" in statement or "sign out" in statement:
@@ -440,6 +402,5 @@ if __name__ == '__main__':
 
         elif 'thank you' in statement:
             speak('You\'re welcome. Anything else you want me to do?')
-            print('You\'re welcome. Anything else you want me to do?')
 
 time.sleep(3)
