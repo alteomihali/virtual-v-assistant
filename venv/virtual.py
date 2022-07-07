@@ -60,7 +60,7 @@ def sendEmail():
     try:
         email = EmailMessage()
         email['To'] = email_list["test"]
-        speak("What is the subject of the email?")
+        speak("What's the subject of the email?")
         email["Subject"] = takeCommand().capitalize()
         email['From'] = senderemail
         speak("What should I send?")
