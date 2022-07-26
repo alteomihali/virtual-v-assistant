@@ -71,7 +71,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 		
 18. Predict Weather of different Cities
 	
-    Human: What's the weather like? in the United Kingdom/ Turkey/ Canada/ Albania?
+    Human: What's the weather like in the United Kingdom/ Turkey/ Canada/ Albania? \n
                City name: Milan/ Madrid/ Florence/ Liverpool/ Istanbul/ Toronto
 		
 	
