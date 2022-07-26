@@ -46,7 +46,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
                                                          **first city**: Manchester, Milan, Miami
                                                          **second city**: Liverpool, Monza, Verona, Ohio
 
-9. Give a daily quote  ==>   Human: Give me a new quote / Shake the app to get a quote
+9. Give a daily quote  ==>   Human: Give me a new quote / What's today's quote?
 
 10. Get the most trending movies   ==>   Human: What is trending right now?
 
