@@ -27,7 +27,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
            696927529 => in console; press the message in whatsapp
 
 
-5. Take notes   ==>   Human: Take my notes / Add new notes for today
+5. Take notes   ==>   Human: Take my notes / Add new notes for today \n
                              programming language / test / run the program / compile
 
 
