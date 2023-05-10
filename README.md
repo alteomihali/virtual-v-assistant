@@ -24,7 +24,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 4. Send a whatsapp message
 
     Human: Send a whatsapp message
-           696927529 => in console; press the message in whatsapp
+           xxxxxxxx => in console; press the message in whatsapp
 
 
 5. Take notes   ==>   Human: Take my notes / Add new notes for today \n
